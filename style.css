@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Colors */
+:root {
+  --primary-gradient-start: hsl(252, 100%, 67%);
+  --primary-gradient-end: hsl(241, 81%, 54%);
+  --secondary-color: hsl(241, 100%, 89%);
+  --shadow-color: rgb(231, 221, 221);
+  --button-background: hsl(224, 30%, 27%);
+  --button-text: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Hanken", sans-serif;
+}
+
+/* Container Styles */
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 1.5em;
+  height: 37.5em;
+  width: 45em;
+  box-shadow: 0.5em 0.5em 1em var(--shadow-color);
+}
+
+/* Left Panel Styles */
+#left {
+  background: linear-gradient(
+    var(--primary-gradient-start),
+    var(--primary-gradient-end)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 1.5em;
+}
+
+h1 {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+#score {
+  border-radius: 100%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12.5em;
+  height: 12.5em;
+}
+
+#big-score {
+  font-size: 3.75em;
+  font-weight: 700;
+  color: var(--button-text);
+}
+
+#small-score {
+  font-size: 0.875em;
+  color: var(--secondary-color);
+}
+
+#left > h2 {
+  color: var(--button-text);
+  font-size: 2em;
+}
+
+#left > p {
+  color: var(--secondary-color);
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 0 3em;
+}
+
+/* Right Panel Styles */
+#right {
+  padding: 2.5em;
+}
+
+#right h2 {
+  font-size: 1.875em;
+  font-weight: 600;
+}
+
+#Summary {
+  padding: 1em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+/* Data Styles */
+.data {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1em;
+  font-size: 1.4em;
+  font-weight: 600;
+  background-color: var(--button-background);
+}
+
+.score2 {
+  font-size: 1.125em;
+  font-weight: 500;
+}
+
+/* Reaction Styles */
+.Reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%);
+}
+
+/* Memory Styles */
+.Memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+
+/* Verbal Styles */
+.Verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+  color: hsl(166, 100%, 37%);
+}
+
+/* Visual Styles */
+.Visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
+}
+
+/* Button Styles */
+button {
+  display: block;
+  margin: 1.5em auto 0;
+  padding: 1em;
+  width: 100%;
+  border: none;
+  font-size: 1.3em;
+  border-radius: 2.5em;
+  cursor: pointer;
+  background-color: var(--button-background);
+  color: var(--button-text);
+}
+
+/* Attribution Styles */
+.attribution {
+  font-size: 1em;
+  text-align: center;
+  margin: 4em;
+  line-height: 2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 500px) {
+  /* Body Styles */
+  body {
+    height: 150vh;
+    display: block;
+  }
+
+  /* Container Styles */
+  #container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  /* Left Side Styles */
+  #left {
+    border-radius: 0px 0px 1.5em 1.5em;
+  }
+}
