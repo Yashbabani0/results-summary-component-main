@@ -30,7 +30,7 @@
   #container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 600px;
+    width: 700px;
     /* height: 400px; */
     box-shadow: 0.5em 0.5em 1em var(--shadow-color);
     border-radius: 20px;
